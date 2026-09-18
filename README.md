@@ -8,17 +8,3 @@ How It Works
  5.Augmentation — Retrieved chunks are assembled into a prompt alongside the user's question.
  6.Generation — The augmented prompt is sent to Gemini (gemini-3.6-flash) with a low temperature and a strict system instruction to answer only from the provided context, and to say so explicitly when the answer isn't covered.
 
-
-Project Structure
-    rag/
-    ├── rag_corpus/                  # Source policy documents (.md), organized by category
-    │   ├── onboarding/
-    │   ├── hr_policies/
-    │   ├── it_security_policies/
-    │   ├── engineering_guidelines/
-    │   └── legal_compliance/
-    ├── rag_model.py                 # Main pipeline script
-    ├── chroma_store/                # Persistent vector DB (auto-created, gitignored)
-    ├── .env                         # API key (gitignored, not committed)
-    ├── pyproject.toml
-    └── README.md
